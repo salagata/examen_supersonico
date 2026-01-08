@@ -1,17 +1,25 @@
 {
-  "dependencies": {
-    "axios": "^1.13.2",
-    "express": "^5.2.1"
-  },
   "name": "examen_supersonico",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "author": "@salagata",
+  "license": "MIT",
+  "description": "An app which uses Pollinations.AI to create exams, with responses.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salagata/examen_supersonico.git"
+  },
+  "bugs": {
+    "url": "https://github.com/salagata/examen_supersonico/issues"
+  },
+  "homepage": "https://github.com/salagata/examen_supersonico#readme"
 }
