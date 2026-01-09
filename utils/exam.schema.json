@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "fields": {
+      "type": "array",
+      "description": "Cada enunciado puede ser o de Desarrollo(D), Complete(C) o Tipo Test(T), puedes poner varias veces el mismo tipo de pregunta, dependiendo lo que pida el usuario",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "Desarrollo",
+                "enum": ["D"]
+              },
+              "name": {
+                "type": "string",
+                "description": "Nombre del enunciado"
+              },
+              "questions": {
+                "type": "array",
+                "description": "Las preguntas, las preguntas seguiran siempre el mismo formato que el que se haya escojido en type",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "La pregunta"
+                    }
+                  },
+                  "required": ["question"],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": ["type", "name", "questions"],
+            "additionalProperties": false
+          },
+
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["C"]
+              },
+              "name": {
+                "type": "string"
+              },
+              "questions": {
+                "type": "array",
+                "description": "Las preguntas, las preguntas seguiran siempre el mismo formato que el que se haya escojido en type",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "La pregunta, el espacio o los espacios a completar se representan asi [_]"
+                    },
+                    "answer": {
+                      "type": "array",
+                      "description": "La respuesta al espacio a completar o las respuestas, si hay mas de un espacio a completar, el orden en el que aparecen los espacios a completar debe ser el mismo que el orden de las respuestas",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "required": ["question", "answer"],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": ["type", "name", "questions"],
+            "additionalProperties": false
+          },
+
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["T"]
+              },
+              "name": {
+                "type": "string"
+              },
+              "questions": {
+                "type": "array",
+                "description": "Las preguntas, las preguntas seguiran siempre el mismo formato que el que se haya escojido en type",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "La pregunta"
+                    },
+                    "options": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "description": "Las opciones, siempre debe de haber UNA UNICA opcion correcta, las opciones deben de ser un string"
+                      }
+                    },
+                    "correct": {
+                      "type": "integer",
+                      "description": "El indice de la respuesta correcta en options"
+                    }
+                  },
+                  "required": ["question", "options", "correct"],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": ["type", "name", "questions"],
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  },
+  "required": ["fields"],
+  "additionalProperties": false
+}

@@ -1,0 +1,75 @@
+{
+  "fields": [
+    {
+      "type": "D",
+      "name": "Preguntas de desarrollo",
+      "questions": [
+        {
+          "question": "Describe las fases principales del ciclo celular (interfase y mitosis) y las características clave de cada una."
+        },
+        {
+          "question": "Explica qué son los puntos de control del ciclo celular y por qué son importantes para la integridad genética de las células."
+        }
+      ]
+    },
+    {
+      "type": "C",
+      "name": "Preguntas de completar",
+      "questions": [
+        {
+          "question": "La interfase se divide en tres etapas: G[_], S y G[_].",
+          "answer": ["1", "2"]
+        },
+        {
+          "question": "Durante la fase S se produce la [_] del ADN.",
+          "answer": ["replicación"]
+        },
+        {
+          "question": "La mitosis se divide en cuatro fases: profase, [_], anafase y telofase.",
+          "answer": ["metafase"]
+        }
+      ]
+    },
+    {
+      "type": "T",
+      "name": "Preguntas tipo test",
+      "questions": [
+        {
+          "question": "¿En qué fase ocurre la separación de las cromátidas hermanas?",
+          "options": ["Profase", "Metafase", "Anafase", "Telofase"],
+          "correct": 2
+        },
+        {
+          "question": "¿Qué proteína es clave para el control del punto de control G1?",
+          "options": ["Ciclina B", "p53", "Tubulina", "Actina"],
+          "correct": 1
+        },
+        {
+          "question": "La citocinesis en células animales se realiza mediante:",
+          "options": [
+            "Placa celular",
+            "Surco de segmentación (miosina y actina)",
+            "Fusión de vesículas",
+            "Formación de un fragmoplasto"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "¿Cuál es el resultado final del ciclo celular en una célula somática?",
+          "options": [
+            "Dos células hijas genéticamente idénticas",
+            "Una célula hija con la mitad de cromosomas",
+            "Cuatro gametos",
+            "Una célula con cromosomas duplicados"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "¿Cuál de las siguientes no forma parte de la mitosis?",
+          "options": ["Profase", "Interfase", "Metafase", "Telofase"],
+          "correct": 1
+        }
+      ]
+    }
+  ]
+}
