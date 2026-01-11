@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Examenes</title>
+</head>
+<body>
+    <div id="data">
+        <h2>Temario:</h2>
+        <textarea name="questions" id="questions" required></textarea>
+        <br>
+        <h2>Informacion Adicional:</h2>
+        <textarea name="extras" id="extras"></textarea>
+        <br>
+        <h2>Depuracion</h2>
+        <label for="no-ai">Ingresar manualmente la configuracion del examen</label>
+        <input type="checkbox" id="no-ai" value="true">
+        <br>
+        <textarea id="json"></textarea>
+        <br>
+        <button id="submit">Generar</button>
+    </div>
+    <p id="response-raw"></p>
+    <ol id="exam">
+    </ol>
+    <script src="./scripts/api.js"></script>
+    <script src="./scripts/exam.js"></script>
+</body>
+</html>
