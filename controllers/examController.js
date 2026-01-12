@@ -5,6 +5,7 @@ const newExam = async (req,res) => {
     const {topic, config} = Object.assign(JSON.parse(req.body),{ config: "" });
     
     const teacher = createChat();
+    res.setHeader("Content-Type","application/json")
     try {
         const exam = await createExam(teacher,topic, config);
         res.status(200).send(JSON.stringify({
