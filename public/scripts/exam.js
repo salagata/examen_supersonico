@@ -1,12 +1,11 @@
 
 function generateExam(response) {
+    // TODO: Pasar a JQuery
+    const fields = response.fields;
     var exam = document.getElementById('exam');
-    document.getElementById('response-raw').textContent = `req: unknown
-    
-    res:${JSON.stringify(response)}
-    ----`;
-    for (let id = 0; id < response.length; id++) {
-        const field = response[id];
+    document.getElementById("exam-raw").value = fields;
+    for (let id = 0; id < fields.length; id++) {
+        const field = fields[id];
         const li = document.createElement('li');
         // checha el tipo de pregunta
         switch(field.type) {
@@ -17,7 +16,7 @@ function generateExam(response) {
                 li.appendChild(h2);
                 // crea las preguntas
                 const ol = document.createElement('ol');
-                let i3 = 0
+                let i3 = 0;
                 for (const questions of field.questions) {
                     // crea el titulo de la pregunta
                     var li2 = document.createElement('li');
@@ -146,13 +145,6 @@ function generateExam(response) {
 
     exam.appendChild(submit);
 }
-function renderExam(exam) {
-    if(exam.constructor.name == "Array") {
-        generateExam(exam)
-    } else {
-        generateExam([exam])
-    }
-}
 
 const btn = document.getElementById('submit');
 
@@ -165,10 +157,10 @@ btn.addEventListener('click', (e) => {
     var data = {
         topic: questions,
         config: extras
-    };
+    }
     if(document.getElementById("no-ai").checked) {
         const jsonExam = document.getElementById("json").value;
-        renderExam(JSON.parse(jsonExam));
+        generateExam(JSON.parse(jsonExam));
     } else {
         fetch("http://localhost:8080/api/v1/exam", {
             method: "POST",
@@ -179,9 +171,9 @@ btn.addEventListener('click', (e) => {
         }).then(x => x.json())
             .then(res => {
                 if(!res.failed) {
-                    renderExam(res.response.fields);
+                    generateExam(res.response);
                 } else {
-                    console.log(res)
+                    console.log(res);
                 }
             })
 //         var xhr = new XMLHttpRequest();
