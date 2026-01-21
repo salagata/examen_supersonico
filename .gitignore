@@ -142,3 +142,4 @@ vite.config.ts.timestamp-*
 
 # Extra notes
 notes.txt
+.http

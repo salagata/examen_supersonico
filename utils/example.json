@@ -2,72 +2,100 @@
   "fields": [
     {
       "type": "D",
-      "name": "Preguntas de desarrollo",
+      "name": "Desarrollo: ciclo geologico y formacion de rocas",
       "questions": [
         {
-          "question": "Describe las fases principales del ciclo celular (interfase y mitosis) y las características clave de cada una."
+          "question": "Explica las diferencias entre los procesos biologicos internos y los procesos geologicos externos en el ciclo geologico, indicando ejemplos y su efecto sobre el relieve."
         },
         {
-          "question": "Explica qué son los puntos de control del ciclo celular y por qué son importantes para la integridad genética de las células."
+          "question": "Describe cómo se forman las rocas igneas, metamorficas y sedimentarias, senalando las condiciones y agentes responsables en cada caso."
         }
       ]
     },
     {
       "type": "C",
-      "name": "Preguntas de completar",
+      "name": "Complete: definiciones y conceptos clave",
       "questions": [
         {
-          "question": "La interfase se divide en tres etapas: G[_], S y G[_].",
-          "answer": ["1", "2"]
+          "question": "El material rocoso muy caliente y liquido que puede solidificarse formando rocas igneas se llama [_].",
+          "answer": ["magma"]
         },
         {
-          "question": "Durante la fase S se produce la [_] del ADN.",
-          "answer": ["replicación"]
+          "question": "Las rocas que se forman por la solidificacion del magma se llaman rocas [_].",
+          "answer": ["igneas"]
         },
         {
-          "question": "La mitosis se divide en cuatro fases: profase, [_], anafase y telofase.",
-          "answer": ["metafase"]
+          "question": "Las rocas que se originan por el transporte y la degradacion de materiales son las rocas [_].",
+          "answer": ["sedimentarias"]
+        },
+        {
+          "question": "Las rocas que se forman a partir de otras rocas preexistentes tras un aumento drastico de la temperatura o la presion son las rocas [_].",
+          "answer": ["metamorficas"]
+        },
+        {
+          "question": "Los agentes que actuan en el proceso geológico externo y que transportan sedimentos son el agua, el hielo y el [_].",
+          "answer": ["viento"]
         }
       ]
     },
     {
       "type": "T",
-      "name": "Preguntas tipo test",
+      "name": "Tipo Test: opciones multiples sobre el temario",
       "questions": [
         {
-          "question": "¿En qué fase ocurre la separación de las cromátidas hermanas?",
-          "options": ["Profase", "Metafase", "Anafase", "Telofase"],
-          "correct": 2
-        },
-        {
-          "question": "¿Qué proteína es clave para el control del punto de control G1?",
-          "options": ["Ciclina B", "p53", "Tubulina", "Actina"],
-          "correct": 1
-        },
-        {
-          "question": "La citocinesis en células animales se realiza mediante:",
+          "question": "¿Que clases de procesos integra el ciclo geologico?",
           "options": [
-            "Placa celular",
-            "Surco de segmentación (miosina y actina)",
-            "Fusión de vesículas",
-            "Formación de un fragmoplasto"
-          ],
-          "correct": 1
-        },
-        {
-          "question": "¿Cuál es el resultado final del ciclo celular en una célula somática?",
-          "options": [
-            "Dos células hijas genéticamente idénticas",
-            "Una célula hija con la mitad de cromosomas",
-            "Cuatro gametos",
-            "Una célula con cromosomas duplicados"
+            "Procesos biologicos internos y procesos geologicos externos",
+            "Procesos únicamente internos",
+            "Procesos unicamente externos",
+            "Procesos quimicos"
           ],
           "correct": 0
         },
         {
-          "question": "¿Cuál de las siguientes no forma parte de la mitosis?",
-          "options": ["Profase", "Interfase", "Metafase", "Telofase"],
+          "question": "¿Qué agente NO es tipico en el transporte de materiales hacia las rocas sedimentarias?",
+          "options": ["Agua", "Hielo", "Viento", "Lava"],
+          "correct": 3
+        },
+        {
+          "question": "¿Cual es la caracteristica principal de las rocas igneas?",
+          "options": [
+            "Se forman por solidificación del magma",
+            "Se forman por acumulacion de sedimentos",
+            "Se transforman por presion y temperatura",
+            "Se forman exclusivamente en la superficie terrestre"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Las rocas metamorficas se originan por:",
+          "options": [
+            "Solidificacion del magma",
+            "Alteracion de rocas preexistentes por temperatura y presión",
+            "Acumulación de fosiles",
+            "Deposicion por rios"
+          ],
           "correct": 1
+        },
+        {
+          "question": "¿Quienes actuan en el proceso geologico externo?",
+          "options": [
+            "Agentes geologicos",
+            "Placas tectonicas",
+            "Magma",
+            "Volcanes"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Una clasificación básica de las rocas endogenas incluye:",
+          "options": [
+            "Igneas y metamorficas",
+            "Sedimentarias y metamorficas",
+            "Igneas y sedimentarias",
+            "Sedimentarias y organicas"
+          ],
+          "correct": 0
         }
       ]
     }

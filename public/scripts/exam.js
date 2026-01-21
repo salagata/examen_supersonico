@@ -168,14 +168,21 @@ btn.addEventListener('click', (e) => {
     };
     if(document.getElementById("no-ai").checked) {
         const jsonExam = document.getElementById("json").value;
-        renderExam(JSON.parse(jsonExam).fields);
+        renderExam(JSON.parse(jsonExam));
     } else {
-        fetch("/api/v1/exam", {
-            "method": "POST",
-            "body": JSON.stringify(data)
+        fetch("http://localhost:8080/api/v1/exam", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
         }).then(x => x.json())
             .then(res => {
-                renderExam(res.fields)
+                if(!res.failed) {
+                    renderExam(res.response.fields);
+                } else {
+                    console.log(res)
+                }
             })
 //         var xhr = new XMLHttpRequest();
 //         request = query(data)

@@ -12,7 +12,7 @@ const systemPrompt = 'Eres una IA que hace examenes, de entrada, recibes el tema
  * @returns {ChatCompletions} 
  */
 function createChat() {    
-    const pol = Pollinations(process.env.API);
+    const pol = new Pollinations(process.env.API);
     const teacher = pol.initChat();
 
     return teacher;

@@ -6,11 +6,9 @@ const examRoutes = require("./routers/exam");
 
 app.use(express.static("public"));
 
+app.use("/api/",express.json())
 app.use("/api/v1/exam",examRoutes)
 
-app.get("/",(req,res) => {
-
-})
 
 const PORT = process.env.PORT;
 app.listen(PORT,() => {

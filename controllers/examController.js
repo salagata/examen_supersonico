@@ -2,7 +2,7 @@ const express = require("express");
 const { createChat, createExam } = require("../models/Exam");
 
 const newExam = async (req,res) => {
-    const {topic, config} = Object.assign(JSON.parse(req.body),{ config: "" });
+    const {topic, config} = Object.assign(req.body,{ config: "" });
     
     const teacher = createChat();
     res.setHeader("Content-Type","application/json")
