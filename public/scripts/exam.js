@@ -3,7 +3,9 @@ function generateExam(response) {
     // TODO: Pasar a JQuery
     const fields = response.fields;
     var exam = document.getElementById('exam');
-    document.getElementById("exam-raw").value = fields;
+    const raw = document.getElementById("exam-raw")
+    raw.value = JSON.stringify(fields);
+    raw.removeAttribute("hidden");
     for (let id = 0; id < fields.length; id++) {
         const field = fields[id];
         const li = document.createElement('li');

@@ -115,6 +115,41 @@
             },
             "required": ["type", "name", "questions"],
             "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "Verdadero y Falso (Boolean)",
+                "enum": ["B"]
+              },
+              "name": {
+                "type": "string",
+                "description": "Nombre del enunciado"
+              },
+              "questions": {
+                "type": "array",
+                "description": "Las preguntas, las preguntas seguiran siempre el mismo formato que el que se haya escojido en type",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "La pregunta"
+                    },
+                    "check": {
+                      "type": "boolean",
+                      "description": "Si el enunciado es Verdadero o Falso"
+                    }
+                  },
+                  "required": ["question","check"],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": ["type", "name", "questions"],
+            "additionalProperties": false
           }
         ]
       }
