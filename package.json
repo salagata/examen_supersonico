@@ -8,7 +8,8 @@
     "express": "^5.2.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init": "node app.js"
   },
   "keywords": [],
   "author": "@salagata",

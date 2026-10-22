@@ -1,3 +1,3 @@
 const PollinationsSession = require("./pollinations");
 
-module.exports = PollinationsSession
+module.exports = PollinationsSession;

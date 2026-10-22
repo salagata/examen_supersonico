@@ -1,4 +1,3 @@
-require("dotenv").config();
 const ChatCompletions = require("../api/completions");
 const Pollinations = require("../api/index");
 const examSchema = require("../utils/exam.schema.json");
@@ -11,11 +10,15 @@ const systemPrompt = 'Eres una IA que hace examenes, de entrada, recibes el tema
  *
  * @returns {ChatCompletions} 
  */
-function createChat() {    
-    const pol = new Pollinations(process.env.API);
-    const teacher = pol.initChat();
-
-    return teacher;
+function createChat() {try {
+        
+        const pol = new Pollinations(process.env.API);
+        const teacher = pol.initChat();
+    
+        return teacher;
+} catch (error) {
+    console.log(error)
+}
 }
 
 
